@@ -5,3 +5,5 @@
 .idea/ 
 out/ 
 ---------------------------------------------
+# Project exclude paths
+/target/
