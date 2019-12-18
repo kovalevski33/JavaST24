@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Runner {
 
-    //Вычислить расстояние между двумя точками с данными координатами (х1, у1)и (x2, у2)
+    //Вычислить расстояние между двумя точками с данными координатами (х1, у1) и (x2, у2)
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите координаты точек для х1, у1, x2, у2");
