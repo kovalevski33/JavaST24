@@ -11,7 +11,7 @@ public class Runner {
     //Подсчитать количество замен.
 
     public static void main(String[] args) throws IOException {
-
+        int count=0;
         Random random = new Random();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -26,11 +26,13 @@ public class Runner {
             arr[i] = random.nextInt(20);
             if (arr[i]>z){
                 arr[i]=z;
+                count++;
             }
         }
 
         for (int i = 0; i <arr.length ; i++) {
             System.out.println(arr[i]);
         }
+        System.out.println("Количество замен " + count);
     }
 }
