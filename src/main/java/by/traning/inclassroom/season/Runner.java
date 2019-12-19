@@ -1,4 +1,4 @@
-package by.traning.inclassroom.inclass1;
+package by.traning.inclassroom.season;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

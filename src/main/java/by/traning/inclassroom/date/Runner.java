@@ -1,4 +1,4 @@
-package by.traning.inclassroom.inclass3;
+package by.traning.inclassroom.date;
 
 import java.io.BufferedReader;
 import java.io.IOException;

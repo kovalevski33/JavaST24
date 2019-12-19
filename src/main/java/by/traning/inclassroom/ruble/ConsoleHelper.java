@@ -1,4 +1,4 @@
-package by.traning.inclassroom.inclass2;
+package by.traning.inclassroom.ruble;
 
 import java.util.List;
 
