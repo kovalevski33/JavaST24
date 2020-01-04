@@ -11,25 +11,26 @@ public class Runner {
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите размерность массива");
 
         int n = Integer.parseInt(reader.readLine());
 
-        int[][] twoDimArray = new int[n][n];//объявили массив и заполнили его элементами
+        int[][] twoDimArray = new int[n][n];
         int k=0;
 
-        for (int i = 0; i < n; i++) {  //идём по строкам
-            for (int j = 0; j < n; j++) {//идём по столбцам
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 if (i==j){
                     twoDimArray[i][j]=k;
-                    System.out.print(" " + twoDimArray[i][j] + " ");//вывод элемента
+                    System.out.print(" " + twoDimArray[i][j] + " ");
                             k++;
                 }
                 else {
-                    System.out.print(" " + twoDimArray[i][j] + " ");//вывод элемента
+                    System.out.print(" " + twoDimArray[i][j] + " ");
                 }
 
             }
-            System.out.println();//перенос строки ради визуального сохранения табличной формы
+            System.out.println();
         }
 
     }
