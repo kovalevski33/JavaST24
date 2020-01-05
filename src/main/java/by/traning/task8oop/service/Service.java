@@ -1,10 +1,10 @@
-package by.traning.task8oop.Service;
+package by.traning.task8oop.service;
 
-import by.traning.task8oop.Bean.Airline;
-import by.traning.task8oop.Bean.City;
-import by.traning.task8oop.Bean.Weekday;
-import by.traning.task8oop.DAO.FileReaderAirline;
-import by.traning.task8oop.DAO.FileWriterAirline;
+import by.traning.task8oop.bean.Airline;
+import by.traning.task8oop.bean.City;
+import by.traning.task8oop.bean.Weekday;
+import by.traning.task8oop.dao.FileReaderAirline;
+import by.traning.task8oop.dao.FileWriterAirline;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package by.traning.task8oop.Bean;
+package by.traning.task8oop.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;

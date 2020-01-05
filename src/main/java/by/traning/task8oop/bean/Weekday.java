@@ -1,4 +1,4 @@
-package by.traning.task8oop.Bean;
+package by.traning.task8oop.bean;
 
 public enum Weekday {
     MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY;

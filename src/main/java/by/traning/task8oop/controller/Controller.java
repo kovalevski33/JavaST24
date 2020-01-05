@@ -1,9 +1,9 @@
-package by.traning.task8oop.Controller;
+package by.traning.task8oop.controller;
 
 
-import by.traning.task8oop.Bean.City;
-import by.traning.task8oop.Bean.Weekday;
-import by.traning.task8oop.Service.Service;
+import by.traning.task8oop.bean.City;
+import by.traning.task8oop.bean.Weekday;
+import by.traning.task8oop.service.Service;
 
 public class Controller {
    private Service service = new Service();
