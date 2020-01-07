@@ -8,7 +8,7 @@ import by.traning.task8oop.service.Service;
 public class Controller {
    private Service service = new Service();
 
-        public void createCityFile (City city)  {
+    public void createCityFile (City city)  {
             service.writeFileCity(city);
                 }
 
