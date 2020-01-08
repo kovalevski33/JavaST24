@@ -13,10 +13,10 @@ public class Runner {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите номер месяца:");
-        int mounth = Integer.parseInt(reader.readLine());
+        int month = Integer.parseInt(reader.readLine());
         String rez;
 
-        switch (mounth){
+        switch (month){
             case 12:
             case 1:
             case 2:
@@ -40,7 +40,5 @@ public class Runner {
             default: throw new Exception("Нельзя сотворить здесь");
         }
         System.out.println(rez);
-
     }
-
 }

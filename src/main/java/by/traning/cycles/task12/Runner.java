@@ -27,8 +27,8 @@ public class Runner {
         String [] arr = s.split("");
 
 
-        for (int i = 0; i <arr.length ; i++) {
-           list.add(Integer.parseInt(arr[i]));
+        for (String value : arr) {
+            list.add(Integer.parseInt(value));
         }
 
         Integer [] array = list.toArray(new Integer[list.size()]);

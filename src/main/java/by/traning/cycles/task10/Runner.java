@@ -48,10 +48,10 @@ public class Runner {
         }
 
         if (s.equals("+")){
-            System.out.println(a+b);;
+            System.out.println(a+b);
         }
         if(s.equals("-")){
-            System.out.println(a-b);;
+            System.out.println(a-b);
         }
         if (s.equals("/")){
             if (b==0){
@@ -62,7 +62,7 @@ public class Runner {
         }
 
         if (s.equals("*")){
-            System.out.println(a*b);;
+            System.out.println(a*b);
         }
 
     }

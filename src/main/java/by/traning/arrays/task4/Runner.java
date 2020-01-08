@@ -33,14 +33,14 @@ public class Runner {
             }
         }
 
-        int array [] = new int[arr.length-count];
+        int[] array = new int[arr.length-count];
         int index=0;
 
-        for (int i = 0; i <arr.length ; i++) {
-                if (arr[i]!=min){
-                    array[index] = arr[i];
-                    index++;
-                }
+        for (int value : arr) {
+            if (value != min) {
+                array[index] = value;
+                index++;
+            }
         }
 
         System.out.println("Исходный массив " + Arrays.toString(arr));

@@ -1,10 +1,10 @@
 package by.traning.decomposition.task3;
 
-        import java.io.BufferedReader;
+import java.io.BufferedReader;
         import java.io.IOException;
         import java.io.InputStreamReader;
-//Даны числа X, Y, Z, Т — длины сторон четырехугольника. Написать метод(методы) вычисления его площади,
-//если угол между сторонами длиной X и Y— прямой
+    //Даны числа X, Y, Z, Т — длины сторон четырехугольника. Написать метод(методы) вычисления его площади,
+    //если угол между сторонами длиной X и Y— прямой
 
 public class Runner {
 
@@ -17,7 +17,7 @@ public class Runner {
         int t = Integer.parseInt(reader.readLine());
 
         ArithmeticHelper arithmeticHelper = new ArithmeticHelper();
-        arithmeticHelper.solution(x,y,z,t);
+        arithmeticHelper.solution(x, y, z, t);
     }
 
 }

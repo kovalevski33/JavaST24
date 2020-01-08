@@ -2,8 +2,6 @@ package by.traning.decomposition.task1;
 
 public class NodNok {
 
-
-
     public void solution (int a, int b){
         int x = a;
         int y = b;
@@ -19,10 +17,8 @@ public class NodNok {
         int nod = a + b;
         int nok = x * y / nod;
 
-
         System.out.println("НОД чисел " + nod);
         System.out.println("НОК чисел " + nok);
     }
-
 
 }
