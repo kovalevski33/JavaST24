@@ -1,4 +1,4 @@
-package by.traning.task9.runner;
+package by.traning.task9.traveltours.runner;
 
 import by.traning.task9.traveltours.controller.Controller;
 
