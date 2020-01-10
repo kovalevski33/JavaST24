@@ -10,6 +10,7 @@ import java.util.Objects;
 public class TourService {
 
    private Transport transport;
+   private String noTour = "К сожалению такого тура нет :<";
 
     public void chooseTour()  {
         System.out.println("Список доступных туров: " + TravelTours.createTravelToursList() + "\n");
@@ -58,7 +59,11 @@ public class TourService {
             }
         }
             if (!exist){
-                ConsoleHelper.printNoExistTour();
+                try {
+                    throw new NoTourException(noTour);
+                } catch (NoTourException e) {
+                    e.printStackTrace();
+                }
             }
     }
 
@@ -78,7 +83,11 @@ public class TourService {
             }
         }
             if (!exist){
-                ConsoleHelper.printNoExistTour();
+                try {
+                    throw new NoTourException(noTour);
+                } catch (NoTourException e) {
+                    e.printStackTrace();
+                }
             }
     }
 
@@ -101,7 +110,11 @@ public class TourService {
             }
         }
             if (!exist){
-                ConsoleHelper.printNoExistTour();
+                try {
+                    throw new NoTourException(noTour);
+                } catch (NoTourException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

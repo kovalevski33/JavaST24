@@ -13,12 +13,21 @@ public class ConsoleHelper {
                 "3.Отсортировать строки матрицы по возрастанию и убыванию значений элементов." + "\n" +
                 "4.Найдите сумму двух матриц.");
     }
-    public int taskScan() throws IOException {
+    public int taskScan()  {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            int a = Integer.parseInt(reader.readLine());
-            if (a<=0 || a>4){
-                System.err.println("Вы ввели некорректные данные");
+        int a = 0;
+        try {
+            a = Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (a<=0 || a>4){
+            try {
+                throw new ValidateException("Вы ввели некорректные данные");
+            } catch (ValidateException e) {
+                e.printStackTrace();
             }
+        }
         return a;
     }
 }

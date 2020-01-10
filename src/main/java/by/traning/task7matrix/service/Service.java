@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Service {
    private MatrixService matrixService = new MatrixService();
 
-    public void startService() throws IOException {
+    public void startService() {
         ConsoleHelper consoleHelper = new ConsoleHelper();
         consoleHelper.taskScreen();
        int a = consoleHelper.taskScan();
@@ -18,5 +18,4 @@ public class Service {
            case 4: matrixService.fourthTask(); break;
        }
     }
-
 }

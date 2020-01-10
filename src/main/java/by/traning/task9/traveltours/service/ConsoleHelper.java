@@ -20,8 +20,4 @@ public class ConsoleHelper {
         System.out.println("Тур найден !");
     }
 
-    public static void printNoExistTour() {
-        System.out.println("К сожалению такого тура нет :<");
-    }
-
 }

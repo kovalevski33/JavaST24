@@ -1,6 +1,7 @@
 package by.traning.task9.traveltours.bean;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TravelTours implements Comparable<TravelTours> {
   private String travelName;
@@ -93,5 +94,23 @@ public class TravelTours implements Comparable<TravelTours> {
     @Override
     public int compareTo(TravelTours travelTours) {
         return (this.coast - travelTours.coast);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TravelTours that = (TravelTours) o;
+        return coast == that.coast &&
+                tourDay == that.tourDay &&
+                Objects.equals(travelName, that.travelName) &&
+                tourType == that.tourType &&
+                transport == that.transport &&
+                nutrition == that.nutrition;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(travelName, tourType, coast, tourDay, transport, nutrition);
     }
 }
