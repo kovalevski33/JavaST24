@@ -2,8 +2,6 @@ package by.traning.task7matrix.service;
 
 import by.traning.task7matrix.view.ConsoleHelper;
 
-import java.io.IOException;
-
 public class Service {
    private MatrixService matrixService = new MatrixService();
 
@@ -16,6 +14,7 @@ public class Service {
            case 2: matrixService.secondTask(); break;
            case 3: matrixService.thirdTask(); break;
            case 4: matrixService.fourthTask(); break;
+           default:
        }
     }
 }

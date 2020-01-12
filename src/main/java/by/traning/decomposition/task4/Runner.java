@@ -10,27 +10,11 @@ import java.io.InputStreamReader;
 public class Runner {
 
     public static void main(String[] args) throws IOException {
-        int i = 1;
-        int a;
-        int arm;
-        int temp;
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите число для нахождения чисел Армстронга ");
+        ArithmeticHelper arithmeticHelper = new ArithmeticHelper();
+        arithmeticHelper.armstrongNumber(Integer.parseInt(reader.readLine()));
 
-        int z = Integer.parseInt(reader.readLine());
-
-        while(i < z) {
-            temp = i;
-            arm = 0;
-            while(temp > 0) {
-                a = temp % 10;
-                arm = arm + (a * a * a);
-                temp = temp / 10;
-            }
-            if(arm == i)
-                System.out.println("Число Армстронга " + i);
-            i++;
-        }
     }
 }

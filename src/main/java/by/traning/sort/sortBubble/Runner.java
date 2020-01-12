@@ -35,13 +35,11 @@ public class Runner {
         if (arr == null || arr.length <= 1) {
             return;
         }
-// i отвечает за шаги
+
         int left = 0;
         int right = arr.length - 1;
         int k = 0;        //индекс последнего обмена
 
-
-//        for (int i = 0; i < arr.length - 1; i++) {
 
         while (left < right) {
             for (int j = left; j < right; j++) {

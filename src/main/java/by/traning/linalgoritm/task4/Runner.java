@@ -29,13 +29,12 @@ public class Runner {
         }
     }
 
-    static boolean isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
-    {
-        double A = area (x1, y1, x2, y2, x3, y3);
-        double A1 = area (x, y, x2, y2, x3, y3);
-        double A2 = area (x1, y1, x, y, x3, y3);
-        double A3 = area (x1, y1, x2, y2, x, y);
-        return(A == A1 + A2 + A3);
+    static boolean isInside (int x1, int y1, int x2, int y2, int x3, int y3, int x, int y) {
+        double a = area (x1, y1, x2, y2, x3, y3);
+        double a1 = area (x, y, x2, y2, x3, y3);
+        double a2 = area (x1, y1, x, y, x3, y3);
+        double a3 = area (x1, y1, x2, y2, x, y);
+        return(a == a1 + a2 + a3);
     }
 
     static double area(int x1, int y1, int x2, int y2, int x3, int y3){

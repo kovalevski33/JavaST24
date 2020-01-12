@@ -22,13 +22,10 @@ public class GUI extends JFrame
 
     public GUI()
     {
-        super("Пример использования Action");
+        super("Action");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        // Панель содержимого
         Container container = getContentPane();
-        // Устанавливаем менеджер последовательного расположения
         container.setLayout(new FlowLayout());
-        // Создание кнопок, выполняющих одно действие
         Action action = new SimpleAction();
         JButton button1 = new JButton(action);
         button1.setName(BUTTON_NAME);
@@ -40,7 +37,6 @@ public class GUI extends JFrame
         button2.setMnemonic('S');
         container.add(button1);
         container.add(button2);
-
 
         String[] items = {
                 City.Kiev.toString(),
@@ -69,14 +65,14 @@ public class GUI extends JFrame
         editWeekDayComboBox.addActionListener(actionListener);
 
         JTextField jTextField = new JTextField();
-        jTextField.setColumns(20);
+        jTextField.setColumns(10);
         container.add(jTextField);
         jTextField.addActionListener(actionListener1);
 
         setSize(640, 480);
         setVisible(true);
     }
-    // Внутренний класс
+
     class SimpleAction extends AbstractAction {
         public void actionPerformed(ActionEvent e) {
             JButton btn = (JButton) e.getSource();

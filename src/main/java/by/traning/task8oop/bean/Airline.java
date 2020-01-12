@@ -77,14 +77,14 @@ public class Airline implements Serializable {
 
     public static ArrayList<Airline> createAirlineList(){
         ArrayList<Airline> airlineList  = new ArrayList<>();
-        airlineList.add(new Airline(City.Moscow,367,"Boing-747",4,Weekday.MONDAY));
-        airlineList.add(new Airline(City.Kiev,367,"Boing-747",4,Weekday.TUESDAY));
-        airlineList.add(new Airline(City.Minsk,367,"Boing-747",4,Weekday.WEDNESDAY));
-        airlineList.add(new Airline(City.Moscow,367,"Boing-747",4,Weekday.THURSDAY));
-        airlineList.add(new Airline(City.Kiev,367,"Boing-747",4,Weekday.FRIDAY));
-        airlineList.add(new Airline(City.Minsk,367,"Boing-747",4,Weekday.SATURDAY));
-        airlineList.add(new Airline(City.Moscow,367,"Boing-747",4,Weekday.SUNDAY));
-        airlineList.add(new Airline(City.Kiev,367,"Boing-747",4,Weekday.MONDAY));
+        airlineList.add(new Airline(City.Moscow,367,"Boeing-737",4,Weekday.MONDAY));
+        airlineList.add(new Airline(City.Kiev,367,"Airbus",4,Weekday.TUESDAY));
+        airlineList.add(new Airline(City.Minsk,367,"Boeing-747-300",4,Weekday.WEDNESDAY));
+        airlineList.add(new Airline(City.Moscow,367,"Boeing-737-800",4,Weekday.THURSDAY));
+        airlineList.add(new Airline(City.Kiev,367,"Boeing-747",4,Weekday.FRIDAY));
+        airlineList.add(new Airline(City.Minsk,367,"Boeing-747",4,Weekday.SATURDAY));
+        airlineList.add(new Airline(City.Moscow,367,"Airbus",4,Weekday.SUNDAY));
+        airlineList.add(new Airline(City.Kiev,367,"Boeing-747",4,Weekday.MONDAY));
         return airlineList;
     }
 

@@ -44,17 +44,17 @@ public class MatrixService {
         int sum = 0;
         int s = 0;
 
-        for (int i = 0; i < matrix.length; i++) {
+        for (int[] a : matrix) {
             for (int j = 0; j < 4; j++) {
-                System.out.print(" " + matrix[i][j] + " ");
+                System.out.print(" " + a[j] + " ");
             }
             System.out.println();
         }
 
 
         for (int j = 0; j < 4; j++) {
-            for (int i = 0; i < matrix.length; i++) {
-                k+=matrix[i][j];
+            for (int[] a : matrix) {
+                k += a[j];
             }
             if (k>sum){
                 sum=k;
@@ -68,7 +68,7 @@ public class MatrixService {
         System.out.println("Индекс столбца " + s);
     }
 
-    public void thirdTask(){
+    public void thirdTask() {
 
         System.out.println("Первоначальный двумерный массив");
 
@@ -118,7 +118,6 @@ public class MatrixService {
                 }
             }
         }
-
 
         k = 0;
         for (int i = 0; i < 3; i++) {

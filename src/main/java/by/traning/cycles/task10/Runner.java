@@ -25,7 +25,7 @@ public class Runner {
             calc(x,y,z);
             while (true){
                 System.out.println("Введите два операнда и знак операции (+, –, /, *)");
-                BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
+                reader = new BufferedReader(new InputStreamReader(System.in));
 
                 int a = Integer.parseInt(reader.readLine());
                 int b = Integer.parseInt(reader.readLine());
@@ -38,7 +38,7 @@ public class Runner {
             }
         }
 
-        }
+    }
 
 
     private static void  calc (int a, int b, String s){

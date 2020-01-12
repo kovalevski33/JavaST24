@@ -37,7 +37,7 @@ public class Runner {
             case 11:
                 rez = FALL;
                 break;
-            default: throw new Exception("Нельзя сотворить здесь");
+            default: throw new IllegalArgumentException("Нельзя сотворить здесь");
         }
         System.out.println(rez);
     }
