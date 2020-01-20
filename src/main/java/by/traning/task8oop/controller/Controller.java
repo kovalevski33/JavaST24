@@ -1,8 +1,8 @@
 package by.traning.task8oop.controller;
 
 
-import by.traning.task8oop.bean.City;
-import by.traning.task8oop.bean.Weekday;
+import by.traning.task8oop.entity.City;
+import by.traning.task8oop.entity.Weekday;
 import by.traning.task8oop.service.Service;
 
 public class Controller {

@@ -3,11 +3,13 @@ package by.traning.task10.textfile.service;
 import by.traning.task10.textfile.entity.Directory;
 import by.traning.task10.textfile.entity.TextFile;
 import by.traning.task10.textfile.dao.TextFileWriter;
+import by.traning.task10.textfile.view.ConsoleHelper;
 
 import java.io.*;
 
 public class FileService {
    private File file;
+   private ConsoleHelper consoleHelper;
 
     public void create(Directory directory){
         new TextFileWriter().createTextFile(directory);
@@ -19,17 +21,6 @@ public class FileService {
 
         if (file.renameTo(file1)) {
             System.out.println("Успешно переименовано");
-        }
-
-    }
-
-    public void show(String directory) {
-        File f = new File(directory);
-        try (BufferedReader fin = new BufferedReader(new FileReader(f))){
-            String line;
-            while ((line = fin.readLine()) != null) System.out.println(line);
-        } catch (IOException e){
-            e.printStackTrace();
         }
 
     }
@@ -49,4 +40,8 @@ public class FileService {
         new TextFileWriter().deleteTextFile(textFile);
     }
 
+    public void show(String directory){
+        consoleHelper = new ConsoleHelper();
+        consoleHelper.show(directory);
+    }
 }

@@ -1,6 +1,6 @@
 package by.traning.task8oop.dao;
 
-import by.traning.task8oop.bean.Airline;
+import by.traning.task8oop.entity.Airline;
 
 import java.io.*;
 import java.util.List;

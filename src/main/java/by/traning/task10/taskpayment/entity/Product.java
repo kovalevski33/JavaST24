@@ -1,5 +1,7 @@
 package by.traning.task10.taskpayment.entity;
 
+import java.util.Objects;
+
 public class Product {
     private String name;
     private int vendorCode;
@@ -38,5 +40,20 @@ public class Product {
     @Override
     public String toString() {
         return String.format("%s, code: %d, price: $ %.2f", name, vendorCode, price);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return vendorCode == product.vendorCode &&
+                Double.compare(product.price, price) == 0 &&
+                Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, vendorCode, price);
     }
 }

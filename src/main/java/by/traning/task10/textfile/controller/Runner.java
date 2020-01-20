@@ -1,4 +1,4 @@
-package by.traning.task10.textfile.runner;
+package by.traning.task10.textfile.controller;
 
 import by.traning.task10.textfile.entity.Directory;
 import by.traning.task10.textfile.entity.MyFile;
@@ -17,6 +17,5 @@ public class Runner {
         textFile.setDirectory("C:\\Users\\Вероника\\Desktop\\JavaST_24\\renameTextFile.txt");
         controller.show(textFile);
         controller.delete(textFile);
-
     }
 }

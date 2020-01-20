@@ -1,7 +1,6 @@
 package by.traning.task10.taskpayment.entity;
 
-import by.traning.task10.taskpayment.service.FileService;
-
+import by.traning.task10.taskpayment.service.Service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,25 +12,34 @@ public class Payment {
     private double balance;
     private Discount discount;
     private Product product;
-    private FileService fileService = new FileService();
+    private Service service = new Service();
 
     public Payment(Discount discount, Product... product) {
         ArrayList<Product> products = new ArrayList<>();
         Collections.addAll(products, product);
         this.discount = discount;
         receipt = new Receipt(products);
-        fileService.createFile();
-        fileService.writeText(products.toString() + "\n");
-        fileService.writeText("Стоимость всех товаров " + receipt.getBalance() +"\n");
-        fileService.writeText(String.format("Стоимость товаров со скидкой %.2f", totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
+        service.createFile();
+        service.writeText(products.toString() + "\n");
+        service.writeText("Стоимость всех товаров " + receipt.getBalance() +"\n");
+        service.writeText(String.format("Стоимость товаров со скидкой %.2f", totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
     }
 
-    public Payment(Receipt receipt, double balance, Discount discount, Product product, FileService fileService) {
+    public Payment(Discount discount, List<Product> products) {
+        this.discount = discount;
+        receipt = new Receipt(products);
+        service.createManualFile();
+        service.writeManualText(products.toString() + "\n");
+        service.writeManualText("Стоимость всех товаров " + receipt.getBalance() +"\n");
+        service.writeManualText(String.format("Стоимость товаров со скидкой %.2f", totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
+    }
+
+    public Payment(Receipt receipt, double balance, Discount discount, Product product, Service service) {
         this.receipt = receipt;
         this.balance = balance;
         this.discount = discount;
         this.product = product;
-        this.fileService = fileService;
+        this.service = service;
     }
 
     public double totalPriceWithDiscount(double price, Discount discount){
@@ -75,12 +83,12 @@ public class Payment {
         this.product = product;
     }
 
-    public FileService getFileService() {
-        return fileService;
+    public Service getFileService() {
+        return service;
     }
 
-    public void setFileService(FileService fileService) {
-        this.fileService = fileService;
+    public void setFileService(Service service) {
+        this.service = service;
     }
 
 
