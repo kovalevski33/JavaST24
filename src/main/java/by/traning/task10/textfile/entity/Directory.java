@@ -9,10 +9,6 @@ public class Directory  {
         this.direct = direct;
     }
 
-    public Directory() {
-
-    }
-
     public String getDirect() {
         return direct;
     }

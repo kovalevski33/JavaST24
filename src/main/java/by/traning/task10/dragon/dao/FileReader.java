@@ -40,6 +40,7 @@ public class FileReader {
                         throw new IllegalStateException("Unexpected value: " + treasureType);
                 }
             }
+            scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Treasure information file not found.");
         }

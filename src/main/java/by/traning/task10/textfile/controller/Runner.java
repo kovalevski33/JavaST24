@@ -3,7 +3,6 @@ package by.traning.task10.textfile.controller;
 import by.traning.task10.textfile.entity.Directory;
 import by.traning.task10.textfile.entity.MyFile;
 import by.traning.task10.textfile.entity.TextFile;
-import by.traning.task10.textfile.controller.Controller;
 
 public class Runner {
     public static void main(String[] args) {

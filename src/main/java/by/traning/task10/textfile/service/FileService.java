@@ -4,19 +4,18 @@ import by.traning.task10.textfile.entity.Directory;
 import by.traning.task10.textfile.entity.TextFile;
 import by.traning.task10.textfile.dao.TextFileWriter;
 import by.traning.task10.textfile.view.ConsoleHelper;
+import by.traning.task10.textfile.view.NoElementToShowException;
 
 import java.io.*;
 
 public class FileService {
-   private File file;
-   private ConsoleHelper consoleHelper;
 
     public void create(Directory directory){
         new TextFileWriter().createTextFile(directory);
     }
 
     public void rename(Directory directory, String name){
-        file = new File(directory.getDirect());
+        File file = new File(directory.getDirect());
         File file1 = new File(name);
 
         if (file.renameTo(file1)) {
@@ -41,7 +40,11 @@ public class FileService {
     }
 
     public void show(String directory){
-        consoleHelper = new ConsoleHelper();
-        consoleHelper.show(directory);
+        ConsoleHelper  consoleHelper = new ConsoleHelper();
+        try {
+            consoleHelper.show(directory);
+        } catch (NoElementToShowException e) {
+            e.printStackTrace();
+        }
     }
 }

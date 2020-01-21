@@ -6,13 +6,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class ConsoleHelper {
-    public void show(String directory) {
+    public void show(String directory) throws NoElementToShowException {
         File f = new File(directory);
         try (BufferedReader fin = new BufferedReader(new FileReader(f))){
             String line;
             while ((line = fin.readLine()) != null) System.out.println(line);
         } catch (IOException e){
-            e.printStackTrace();
+           throw new NoElementToShowException("Ошибка чтения файла");
         }
     }
 }

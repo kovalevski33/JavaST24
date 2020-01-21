@@ -22,7 +22,8 @@ public class Payment {
         service.createFile();
         service.writeText(products.toString() + "\n");
         service.writeText("Стоимость всех товаров " + receipt.getBalance() +"\n");
-        service.writeText(String.format("Стоимость товаров со скидкой %.2f", totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
+        service.writeText(String.format("Стоимость товаров со скидкой %.2f",
+                totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
     }
 
     public Payment(Discount discount, List<Product> products) {
@@ -31,7 +32,8 @@ public class Payment {
         service.createManualFile();
         service.writeManualText(products.toString() + "\n");
         service.writeManualText("Стоимость всех товаров " + receipt.getBalance() +"\n");
-        service.writeManualText(String.format("Стоимость товаров со скидкой %.2f", totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
+        service.writeManualText(String.format("Стоимость товаров со скидкой %.2f",
+                totalPriceWithDiscount(receipt.getTotalPrice(),discount)) + "\n");
     }
 
     public Payment(Receipt receipt, double balance, Discount discount, Product product, Service service) {

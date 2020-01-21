@@ -23,7 +23,7 @@ public class Service {
         fileWriter.createFile();
     }
 
-    public void createManualFile(){
+    public void createManualFile() {
         fileWriter.createFileManual();
     }
 
@@ -36,7 +36,7 @@ public class Service {
         fileWriter.writeManualPaymentFile(s);
     }
 
-    public void createStandardPayment(){
+    public void createStandardPayment() {
         Product p1 = new Product("Milk", 100253, 7.69);
         Product p2 = new Product("Bread", 120222, 4.99);
         Product p3 = new Product("Orange", 115125, 12.11);
@@ -67,7 +67,12 @@ public class Service {
                }
                productName = bufferedReader.readLine();
            }
-           new Payment(Discount.SALE,orderList);
+           if (orderList.isEmpty()){
+               System.out.println("Список покупок пуст");
+           } else {
+               new Payment(Discount.SALE,orderList);
+           }
+
        } catch (IOException e){
            e.printStackTrace();
        }

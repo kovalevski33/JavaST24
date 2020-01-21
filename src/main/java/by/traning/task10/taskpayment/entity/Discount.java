@@ -4,6 +4,14 @@ public enum Discount {
 
     SALE(50,"Распродажа"), STOCK(25,"Акция"),NONE(0,"Нет скидки");
 
+    private int percent;
+    private String name;
+
+    Discount(int percent, String name) {
+        this.percent = percent;
+        this.name = name;
+    }
+
     public int getPercent() {
         return percent;
     }
@@ -11,15 +19,6 @@ public enum Discount {
 
     public String getName() {
         return name;
-    }
-
-
-    private int percent;
-    private String name;
-
-    Discount(int percent, String name) {
-        this.percent = percent;
-        this.name = name;
     }
 
     @Override

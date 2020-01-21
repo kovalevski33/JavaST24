@@ -9,7 +9,7 @@ public class FileWriter {
     private String pathNameManual = "C:\\Users\\Вероника\\Desktop\\JavaST_24\\ManualPaymentFile.txt";
 
 
-    public void writeText(String text){
+    public void writeText(String text) {
         try (java.io.FileWriter writer = new java.io.FileWriter(pathName, true)){
             BufferedWriter bufferWriter = new BufferedWriter(writer);
             bufferWriter.write(text);
@@ -20,16 +20,16 @@ public class FileWriter {
         }
     }
 
-    public void writeManualPaymentFile(String text){
-        createFileManual();
-        try (java.io.FileWriter writer = new java.io.FileWriter(pathNameManual, true)){
-            BufferedWriter bufferWriter = new BufferedWriter(writer);
-            bufferWriter.write(text);
-            bufferWriter.close();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void writeManualPaymentFile(String text) {
+            createFileManual();
+            try (java.io.FileWriter writer = new java.io.FileWriter(pathNameManual, true)){
+                BufferedWriter bufferWriter = new BufferedWriter(writer);
+                bufferWriter.write(text);
+                bufferWriter.close();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
     }
 
     public void createFileManual() {
@@ -53,7 +53,6 @@ public class FileWriter {
             e.printStackTrace();
         }
     }
-
 
     public String getPathName() {
         return pathName;
