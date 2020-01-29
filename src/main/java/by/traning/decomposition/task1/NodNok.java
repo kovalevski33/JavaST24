@@ -9,7 +9,7 @@ public class NodNok {
         while (a != 0 && b != 0){
             if (a > b){
                 a = a % b;
-            }else{
+            } else {
                 b = b % a;
             }
         }

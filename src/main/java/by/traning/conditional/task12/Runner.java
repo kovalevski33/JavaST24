@@ -1,4 +1,4 @@
-package by.traning.conditional.task5;
+package by.traning.conditional.task12;
 
 import java.io.BufferedReader;
 import java.io.IOException;
