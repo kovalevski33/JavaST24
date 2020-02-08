@@ -1,4 +1,4 @@
-package by.traning.cycles.task11;
+package by.traning.cycles.task32;
 
 import java.io.BufferedReader;
 import java.io.IOException;

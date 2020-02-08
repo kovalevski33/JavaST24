@@ -1,4 +1,4 @@
-package by.traning.cycles.task10;
+package by.traning.cycles.task28;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +25,6 @@ public class Runner {
             calc(x,y,z);
             while (true){
                 System.out.println("Введите два операнда и знак операции (+, –, /, *)");
-                reader = new BufferedReader(new InputStreamReader(System.in));
 
                 int a = Integer.parseInt(reader.readLine());
                 int b = Integer.parseInt(reader.readLine());
@@ -57,7 +56,7 @@ public class Runner {
             if (b==0){
                 System.out.println("На ноль делить нельзя");
             } else {
-                System.out.println(a/b);
+                System.out.println((double) a/b);
             }
         }
 
