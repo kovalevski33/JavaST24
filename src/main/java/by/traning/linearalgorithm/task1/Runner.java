@@ -1,4 +1,4 @@
-package by.traning.linalgoritm.task1;
+package by.traning.linearalgorithm.task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
